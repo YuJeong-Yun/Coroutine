@@ -5,6 +5,7 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.yield
 
 // runBlocking = 일반 루틴 세계와 코루틴 세계를 연결 -> 이 함수 자체로 코루틴을 만듦
+// 기본적으로 runBlocking에 있는 구문이 실행되고 launch가 실행됨 -> launch는 기본적으로 runBlocking이 실행되는 스레드에서 실행됨
 fun main(): Unit = runBlocking {
     printWithThread("START")
     // launch = 반환값이 없는 코루틴을 만듦 -> 즉 여기에는 runBlocking, launch에 의한 코루틴 2개가 있음
